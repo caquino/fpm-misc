@@ -6,7 +6,7 @@ class ConsulTemplate < FPM::Cookery::Recipe
   homepage      'https://github.com/hashicorp/consul-template'
   section       'admin'
 
-  source        "https://github.com/hashicorp/consul-template/releases/download/v#{version}/consul_template_#{version}_linux_amd64.tar.gz"
+  source        "https://github.com/hashicorp/consul-template/releases/download/v#{version}/consul_template_#{version}_linux_amd64.zip"
   sha256        '1162de7ecd6303dccc3e8c3cb7faaecb55d1577eea9b690c56cb156102694f15'
 
 
@@ -21,7 +21,7 @@ class ConsulTemplate < FPM::Cookery::Recipe
   private
 
   def install_bin
-    folder = File.join(File.basename(source, '.tar.gz'))
+    folder = File.join(File.basename(source, '.zip'))
     glob = File.join(builddir(folder),'consul-template')
 
     Dir[glob].each do |file|
