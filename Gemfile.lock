@@ -1,43 +1,71 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    CFPropertyList (2.2.8)
     addressable (2.3.8)
     arr-pm (0.0.10)
       cabin (> 0)
-    backports (3.6.6)
-    buildtasks (0.0.2)
+    backports (3.21.0)
+    buildtasks (0.0.6)
       rake
-    cabin (0.7.1)
-    childprocess (0.5.6)
+    cabin (0.9.0)
+    childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
-    clamp (0.6.5)
-    facter (2.4.4)
-      CFPropertyList (~> 2.2.6)
-    ffi (1.9.10)
-    fpm (1.4.0)
+    clamp (1.0.1)
+    dotenv (2.7.6)
+    facter (2.5.7)
+    fast_gettext (1.1.2)
+    ffi (1.12.2)
+    fpm (1.12.0)
       arr-pm (~> 0.0.10)
       backports (>= 2.6.2)
       cabin (>= 0.6.0)
-      childprocess
-      clamp (~> 0.6)
-      ffi
-      json (>= 1.7.7)
-    fpm-cookery (0.30.1)
-      addressable
+      childprocess (< 1.0.0)
+      clamp (~> 1.0.0)
+      ffi (~> 1.12.0)
+      git (>= 1.3.0, < 2.0)
+      json (>= 1.7.7, < 3.0)
+      pleaserun (~> 0.0.29)
+      ruby-xz (~> 0.2.3)
+      stud
+    fpm-cookery (0.35.1)
+      addressable (~> 2.3.8)
       facter
       fpm (~> 1.1)
-      puppet (~> 3.4)
+      json (>= 1.7.7, < 2.0)
+      json_pure (>= 1.7.7, < 2.0)
+      puppet (>= 3.4, < 6.0)
+      safe_yaml (~> 1.0.4)
       systemu
-    hiera (1.3.4)
-      json_pure
-    json (1.8.3)
-    json_pure (1.8.2)
-    puppet (3.8.2)
-      facter (> 1.6, < 3)
-      hiera (~> 1.0)
-      json_pure
-    rake (10.4.2)
+    git (1.8.1)
+      rchardet (~> 1.8)
+    hiera (3.7.0)
+    insist (1.0.0)
+    io-like (0.3.1)
+    json (1.8.6)
+    json_pure (1.8.6)
+    locale (2.1.3)
+    multi_json (1.15.0)
+    mustache (0.99.8)
+    pleaserun (0.0.31)
+      cabin (> 0)
+      clamp
+      dotenv
+      insist
+      mustache (= 0.99.8)
+      stud
+    puppet (5.5.22)
+      facter (> 2.0.1, < 4)
+      fast_gettext (~> 1.1.2)
+      hiera (>= 3.2.1, < 4)
+      locale (~> 2.1)
+      multi_json (~> 1.10)
+    rake (13.0.3)
+    rchardet (1.8.0)
+    ruby-xz (0.2.3)
+      ffi (~> 1.9)
+      io-like (~> 0.3)
+    safe_yaml (1.0.5)
+    stud (0.0.23)
     systemu (2.6.5)
 
 PLATFORMS
@@ -47,3 +75,6 @@ DEPENDENCIES
   buildtasks
   fpm
   fpm-cookery
+
+BUNDLED WITH
+   2.1.4
